@@ -1,0 +1,21 @@
+@import "../../styles/mixins.scss";
+
+.portfolio {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.5rem;
+  }
+  img {
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  &__card {
+    overflow: hidden;
+  }
+  &__card:hover {
+    img {
+      transform: scale(110%);
+    }
+  }
+}

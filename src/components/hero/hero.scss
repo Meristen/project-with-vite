@@ -1,0 +1,52 @@
+@import "../../styles/mixins.scss";
+.hero {
+  margin-top: 72px;
+  background-image: url(../../assets/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 64px;
+  }
+  &__left {
+    padding-block: 80px;
+  }
+  h3 {
+    color: var(--extra-color);
+    font-size: 32px;
+    font-weight: 300;
+  }
+  h1 {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+
+    @media screen and (max-width: 600px) {
+      font-size: 80px;
+    }
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--m-silver);
+    margin-block: 32px;
+  }
+  &__right {
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+  &__right-img {
+    display: grid;
+  }
+  &__right-img img {
+    width: 130%;
+    place-self: center;
+  }
+}

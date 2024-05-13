@@ -1,0 +1,29 @@
+@import "../../styles/mixins.scss";
+.review {
+  background-color: var(--rich-black);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    align-items: center;
+    gap: 32px;
+
+    @media screen and (max-width: 900px) {
+      gap: 64px;
+    }
+  }
+  &__card {
+    text-align: center;
+  }
+  &__info {
+    img {
+      margin-inline: auto;
+      margin-block: 32px 16px;
+    }
+    h4 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+  }
+}

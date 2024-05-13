@@ -1,0 +1,50 @@
+@import "../../styles/mixins.scss";
+
+.skills {
+  background-color: var(--rich-black);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: normal;
+    @media screen and (max-width: 600px) {
+      font-size: 30px;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: var(--extra-color);
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+    }
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  span {
+    color: var(--extra-color);
+  }
+}

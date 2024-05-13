@@ -1,0 +1,95 @@
+@import "../../styles/mixins.scss";
+
+.navbar {
+  background-color: #070d1be6;
+  padding-block: 19px;
+  position: fixed;
+  z-index: 900;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo img {
+    width: 100%;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #070d1be6;
+      width: 100%;
+      border-top: 1px solid var(--m-silver);
+      display: none;
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    color: var(--main-white);
+    font-weight: 500;
+    font-family: "Roboto" sans-serif;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--m-silver);
+    }
+    @media screen and (max-width: 900px) {
+      font-weight: 400;
+      text-transform: capitalize;
+      color: var(--m-silver);
+    }
+  }
+
+  &__phone {
+    padding-left: 48px;
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    svg {
+      color: white;
+    }
+    span {
+      color: var(--extra-color);
+    }
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+  // &__phone::after {
+  //   position: absolute;
+  //   content: "|";
+  //   left: 80rem;
+  //   color: var(--main-white);
+  // }
+  &__menu {
+    display: none;
+    @media screen and (max-width: 900px) {
+      display: inline-block;
+      font-size: 36px;
+      color: var(--m-silver);
+    }
+  }
+  .show {
+    display: flex !important;
+    padding-top: 20px;
+  }
+}
